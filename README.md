@@ -1,65 +1,42 @@
+# About Ezekiel Coker
+
+I'm a student at MSU Texas studying computer science. I'm particularly interested in database management, data analysis, and game design.
+
 # 3603 — Programming for Data Science
 
-Course materials for MSU Texas CS/DS 3603. Beginner-friendly, project-focused Python and data science, built around Jupyter notebooks and two open-source textbooks by Jake VanderPlas.
+The course covered introductory data science topics with a focus on Python programming concepts designed around Jupyter notebooks.
 
-## 01 - Start here
-
-New to the course? Work through **[`01-StartHere/`](01-StartHere/)** before touching an assignment — it's an 8-part guide covering everything from creating a GitHub account to submitting finished notebooks:
-
-> **You will notice some OVERLAP between some of the Parts, if you've done it already, just skip it (e.g. git config --global blah blah blah)**
-
-| Part                         | Covers                                                               |
-| ---------------------------- | -------------------------------------------------------------------- |
-| [0](01-StartHere/Part-00.md) | Checking what's already installed (Git, Python, VS Code, Conda)      |
-| [1](01-StartHere/Part-01.md) | GitHub account + git identity                                        |
-| [2](01-StartHere/Part-02.md) | Installing/repairing Git, Python 3.13, and VS Code                   |
-| [3](01-StartHere/Part-03.md) | Creating and connecting your course repository (`upstream`/`origin`) |
-| [4](01-StartHere/Part-04.md) | Python virtual environment + `requirements.txt`                      |
-| [5](01-StartHere/Part-05.md) | Using Jupyter notebooks in VS Code                                   |
-| [6](01-StartHere/Part-06.md) | Committing and submitting your work                                  |
-| [7](01-StartHere/Part-07.md) | Maintaining your repo and troubleshooting git                        |
-| [8](01-StartHere/Part-08.md) | Quick reference for the whole workflow                               |
-
-Course dependencies (numpy, pandas, matplotlib, seaborn, scikit-learn, jupyter) live in [`01-StartHere/requirements.txt`](01-StartHere/requirements.txt).
-
-This course runs entirely on a **local VS Code + venv + git** setup — not Colab or Codespaces.
-
-## Repo structure
-
-| Folder          | Subfolder | Description                                          |
-| :-------------- | --------- | :--------------------------------------------------- |
-| 01-StartHere/   |           | Setup guide (Parts 1–8) + requirements.txt           |
-| 02-Assignments/ |           | Numbered course modules, 01–08 (see below)           |
-| 03-Completed/   |           | Where your finished notebooks land after each module |
-| 04-Resources    |           |                                                      |
-|                 | Books/    | Source textbooks (VanderPlas), for reference/reading |
-|                 | data/     | Shared datasets used across notebooks                |
-|                 | Archive/  | Retired modules (old `04-Functions`, `05-Loops_and_Iteration`) |
-
-## 02 - Assignments
-
-Each module folder follows the same layout: numbered notebooks, a `README.md`, `glossary.md`, `quiz.md`, and `worksheet.md` (plus any data files a module needs). Most notebooks end with an optional 🔥 Challenge section for extra practice.
+## Completed Work
 
 | Module                                                                                   | Topic                                                                                          |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [01-Scalar_Types_and_Control_Flow](02-Assignments/01-Scalar_Types_and_Control_Flow/)     | Scalar types, arithmetic, type casting, `if`/`elif`/`else`, logical operators                  |
-| [02-Strings_and_Text](02-Assignments/02-Strings_and_Text/)                               | Strings as a sequence type, string methods, f-strings                                          |
-| [03-Python_Containers](02-Assignments/03-Python_Containers/)                             | Lists, tuples, and dictionaries — including 2D lists, lists of dictionaries, and JSON/GeoJSON  |
-| [03b-Containers_to_Functions](02-Assignments/03b-Containers_to_Functions/)             | Containers again, taught through problems, then why functions exist, `print` vs `return`, and pipelines |
-| [04-More_Functions_and_Loops](02-Assignments/04-More_Functions_and_Loops/)             | Default and keyword arguments, scope, `while`/`break`/`continue`, reading files with `with`, `try`/`except` |
-| [06-Foundations](02-Assignments/06-Foundations/)                                         | Jupyter/IPython tooling — magics, Markdown, file I/O, plotting basics, getting help, profiling |
-| [07-Working_with_Data_Adv](02-Assignments/07-Working_with_Data_Adv/)                     | Sets, then Pandas `Series`/`DataFrame` — loading, cleaning, indexing, and exploring real datasets |
-| [08-Describing_and_Visualizing_Data](02-Assignments/08-Describing_and_Visualizing_Data/) | Summary statistics and visualization with Matplotlib/Seaborn                                   |
+| [01-Scalar_Types_and_Control_Flow](03-Completed/01-Scalar_Types_and_Control_Flow/)     | Scalar types, arithmetic, type casting, `if`/`elif`/`else`, logical operators                  |
+| [02-Strings_and_Text](03-Completed/02-Strings_and_Text/)                               | Strings as a sequence type, string methods, f-strings                                          |
+| [03-Python_Containers](03-Completed/03-Python_Containers/)                             | Lists, tuples, and dictionaries — including 2D lists, lists of dictionaries, and JSON/GeoJSON  |
+| [03b-Containers_to_Functions](03-Completed/03b-Containers_to_Functions/)             | Containers again, taught through problems, then why functions exist, `print` vs `return`, and pipelines |
+| [04-More_Functions_and_Loops](03-Completed/04-More_Functions_and_Loops/)             | Default and keyword arguments, scope, `while`/`break`/`continue`, reading files with `with`, `try`/`except` |
+| [06-Foundations](03-Completed/06-Foundations/)                                         | Jupyter/IPython tooling — magics, Markdown, file I/O, plotting basics, getting help, profiling |
+| [07-Working_with_Data_Adv](03-Completed/07-Working_with_Data_Adv/)                     | Sets, then Pandas `Series`/`DataFrame` — loading, cleaning, indexing, and exploring real datasets |
+| [08-Describing_and_Visualizing_Data](03-Completed/08-Describing_and_Visualizing_Data/) | Summary statistics and visualization with Matplotlib/Seaborn                                   |
 
-Modules 07 and 08 work entirely from local data files (in-folder or in [`data/`](data/)) — no network access required.
+# Repository Organization
 
-## 03 - Completed work
+**01-StartHere**
 
-Copy your finished notebooks into [`Completed/`](Completed/) as you go — see [Part 6](01-StartHere/Part-06.md) of the setup guide for the commit/submit workflow.
+- Contains resources that explain how to set up, organize, and complete the course repository.
 
-## Books
+**02-Assignments**
 
-Two open-source textbooks by [Jake VanderPlas](https://github.com/jakevdp) anchor the course content:
+- Contains all the course assignment notebooks in their module folders as they were assigned before completion.
 
-- **[Intro2Python](04-Resources/Books/Intro2Python/)** — _A Whirlwind Tour of Python_
-- **[PythonDataScienceHandbook](04-Resources/Books/PythonDataScienceHandbook/)** — _Python Data Science Handbook_
+**03-Completed**
+
+- Contains all the completed course assignment notebooks in their module folders. These are the modules and assignments that are linked in each table.
+
+**04-Resources**
+
+- Contains archived course assignments, books used in the course, and data files used in assignments.
+
+**Work**
+
+- Contains the course assignments that are currently being worked on.
