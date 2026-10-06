@@ -6,3 +6,4 @@ Carol,95
 
 Dev,62
 Eli,78
+Fay,absent
