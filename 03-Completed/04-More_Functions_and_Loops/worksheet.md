@@ -13,12 +13,14 @@ def price(amount, tax=0.0825, discount=0):
 
 What does each call return?
 
-1. `price(100)` → ____________________________
-2. `price(100, discount=10)` → ____________________________
-3. `price(100, 0)` → ____________________________
-4. `price(discount=5, amount=20)` → ____________________________
+1. `price(100)` → **`108.25`**
+2. `price(100, discount=10)` → **`98.25`**
+3. `price(100, 0)` → **`100.00`**
+4. `price(discount=5, amount=20)` → **`16.65`**
 
 > 🤖 **Explain It:** Why are keyword arguments easier to read than positional ones in a call like `price(100, 0, 10)`?
+
+**Because keyword arguments rely on name so you don't have to remember or look up the position of each argument.**
 
 ---
 
@@ -37,9 +39,11 @@ result = add_one(count)
 print(count, result)
 ```
 
-`Answer:` ____________________________
+`Answer:` **`0 1` because `print(count, result)` calls `count` outside of the function before calling the `result` of `add_one(count)`.**
 
 > 🤖 **Explain It:** Describe the "room with two doors" model of a function in your own words.
+
+**`Arguments` enter through the `parameters` door of the function and leave through the `return` door.**
 
 ---
 
@@ -55,15 +59,15 @@ while balance < 150:
 
 | pass | `balance` at the start | `balance < 150`? | `balance` after | `years` after |
 |------|------------------------|------------------|-----------------|---------------|
-| 1 | 100 | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
+| 1 | 100 | yes | 120 | 1 |
+| 2 | 120 | yes | 140 | 2 |
+| 3 | 140 | yes | 160 | 3 |
+| 4 | 160 | no | 160 | 3 |
 
-Final `years`: ____________  Final `balance`: ____________
+Final `years`: **3**  Final `balance`: **160**
 
 What single change would make this an **infinite** loop?  
-`Answer:` ____________________________
+`Answer:` **By changing `balance = balance + 20` to `balance = balance - 20`.**
 
 ---
 
@@ -71,10 +75,10 @@ What single change would make this an **infinite** loop?
 
 | Task | `for` or `while`? | Why? |
 |------|-------------------|------|
-| Print each line of a file | | |
-| Keep asking for a password until it's correct | | |
-| Find the average of a list of prices | | |
-| Double a number until it's over one million | | |
+| Print each line of a file | for | You know how many lines are in a file. |
+| Keep asking for a password until it's correct | while | You don't know how many times an incorrect password may be given. |
+| Find the average of a list of prices | for | You know how many items are in a list. |
+| Double a number until it's over one million | while | You don't know how many times a number may need to be doubled. |
 
 ---
 
@@ -90,10 +94,12 @@ Rex,dog
 Tom,cat
 ```
 
-1. How many times does `for line in f:` run? ____________
+1. How many times does `for line in f:` run? **5**
 2. Which lines should your code skip, and how would you detect each one?  
-   `Answer:` ____________________________
+   `Answer:` **Skip `name,species` and detect it with `if line.startswith("name"):`, skip the `blank` line and detect it with `if not line.strip():`, and skip `# rescued in May` and detect it with `if line.lstrip().startswith("#"):`.**
 3. Write the list of dictionaries a `read_pets` function should return:  
-   `Answer:` ____________________________
+   `Answer:` **[{"name": "Rex", "species": "dog"}, {"name": "Tom", "species": "cat"}]**
 
 > 🤖 **Explain It:** When is `try` / `except` a good idea, and when does it just hide bugs?
+
+**`try` / `except` is a good idea when you expect something might reasonably fail due to external conditions you don’t control. `try` / `except` just hides bugs when it's used to silence errors caused by your own code.**
