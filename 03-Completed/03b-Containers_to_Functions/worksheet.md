@@ -21,15 +21,19 @@ for t in temps:
 | pass | `t` | `total` | `count` |
 |------|-----|---------|---------|
 | start | — | 0 | 0 |
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
+| 1 | 31 | 31 | 1 |
+| 2 | 45 | 76 | 1 |
+| 3 | 28 | 104 | 2 |
+| 4 | 52 | 156 | 2 |
 
 Which **two** patterns are mixed together in this loop?  
-`Answer:` ____________________________
+`Answer:` **Accumulate + Count**
 
 > 🤖 **Explain It:** Explain the difference between Accumulate, Count, and Filter as if you were talking to someone who has never programmed.
+
+**Accumulate: You keep a running total. Like adding up all your receipts to see how much you spent.**
+**Count: You tally how many things match a condition. Like counting how many students scored above 90.**
+**Filter: You keep only the items that match a condition. Like making a new list of only the passing scores.**
 
 ---
 
@@ -37,13 +41,15 @@ Which **two** patterns are mixed together in this loop?
 
 | Scenario | Container | Why? |
 |----------|-----------|------|
-| Daily step counts for a month | | |
-| A playing card (rank, suit) | | |
-| Username → password hash | | |
-| Every distinct IP address in a log file | | |
-| Your class schedule, in order | | |
+| Daily step counts for a month | list | Ordered, fixed-length sequence. |
+| A playing card (rank, suit) | tuple | Two fixed parts that never change meaning. |
+| Username → password hash | dict | Key -> value lookup. |
+| Every distinct IP address in a log file | set | Automatically removes duplicates. |
+| Your class schedule, in order | list | Order matters. |
 
 > 🤖 **Explain It:** Pick the scenario you were *least* sure about and argue for a different container than the one you chose.
+
+**I was least sure about `Your class schedule, in order`. A dictionary could be used instead because then you could look up a class by name.**
 
 ---
 
@@ -61,13 +67,13 @@ course = {
 
 Write the value after **each** step:
 
-1. `course["students"]` → ____________________________
-2. `course["students"][1]` → ____________________________
-3. `course["students"][1]["scores"]` → ____________________________
-4. `course["students"][1]["scores"][0]` → ____________________________
+1. `course["students"]` → **[{"name": "Ana", "scores": [88, 92]}, {"name": "Ben", "scores": [75, 81]}]**
+2. `course["students"][1]` → **{"name": "Ben", "scores": [75, 81]}**
+3. `course["students"][1]["scores"]` → **[75, 81]**
+4. `course["students"][1]["scores"][0]` → **75**
 
 Write the expression that gets Ana's second score:  
-`Answer:` ____________________________
+`Answer:` **course["students"][0]["scores"][1]**
 
 ---
 
@@ -82,7 +88,7 @@ def f(x):
 print(f(f(f(0))))
 ```
 
-   `Answer:` ____________________________
+   `Answer:` **3**
 
 2. What prints? Explain why.
 
@@ -94,7 +100,7 @@ x = shout("hi")
 print(x)
 ```
 
-   `Answer:` ____________________________
+   `Answer:` **`HI` then `None` because shout does not return anything, so Python gives it the default return value: `None`.**
 
 3. Circle the **parameters** and underline the **arguments**:
 
@@ -105,7 +111,12 @@ def greet(name, greeting):
 greet("Ada", "Hello")
 ```
 
+**Circled parameters: `name` and `greeting`**
+**Underlined arguments: `"Ada"` and `"Hello"`**
+
 > 🤖 **Explain It:** In your own words, explain `print()` vs. `return`. Then explain why getting it wrong breaks a pipeline.
+
+**`print()` displays output to the screen while `return` gives a value back to the caller so another function can use it. Getting it wrong breaks a pipline because printed output cannot be used as data.**
 
 ---
 
@@ -114,16 +125,16 @@ greet("Ada", "Hello")
 Write a contract for a function `longest_word(words)`:
 
 ```text
-IN:
-OUT:
-DOES:
+IN: a list of strings
+OUT: the single longest string
+DOES: scans through the list and returns the longest word 
 ```
 
 Write one test of each kind:
 
-- Normal: ____________________________
-- Boundary: ____________________________
-- Weird: ____________________________
+- Normal: **longest_word(["cat", "giraffe", "dog"]) -> "giraffe"**
+- Boundary: **longest_word(["hi"]) -> "hi"**
+- Weird: **longest_word([]) -> None**
 
 ---
 
@@ -132,7 +143,24 @@ Write one test of each kind:
 > "Given a list of prices, drop any that are `0` or less, add 8.25% tax to each, then find the total."
 
 1. Name each function you'd need.
+- **drop_free(prices)**
+- **add_tax(prices)**
+- **total(prices)**
+
 2. For each one, write what goes **in** and what comes **out** (shape, not just "data").
+- **drop_free: list -> list**
+- **add_tax: list -> list**
+- **total: list -> number**
+
 3. Draw the pipeline with arrows, labeling each arrow with the data's shape.
+[prices] 
+    ↓ (list → list)
+drop_free
+    ↓ (list → list)
+add_tax
+    ↓ (list → number)
+total
 
 > 🤖 **Explain It:** Why is a pipeline of small functions easier to fix than one big block of code?
+
+**Small functions isolate mistakes. If your tax is wrong, you fix one function. If your filtering is wrong, you fix one function. In a giant block of coode, everything is tangled. Changing one part risks breaking another. Pipelines keep logic modular, testable, and predictable.**
