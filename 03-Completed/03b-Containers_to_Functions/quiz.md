@@ -10,6 +10,8 @@ Try every question on your own first. The Answer Key is at the bottom, so don't 
 
 **1.** (Short Answer) Why is `scores = [87, 91, 74]` better than `score1 = 87`, `score2 = 91`, `score3 = 74`? Give two reasons.
 
+**you can loop over it; adding or removing a score doesn't mean changing the code**
+
 **2.** (Code Tracing) What prints?
 ```python
 scores = [87, 91, 74, 88, 95]
@@ -18,13 +20,17 @@ scores.remove(91)
 print(scores[1], scores[-1], len(scores))
 ```
 
+**`74 60 5`**
+
 **3.** (Multiple Choice) Which container fits "Student ID → GPA" best?
-A) list  B) tuple  C) dictionary  D) set
+A) list  B) tuple  **C) dictionary**  D) set
 
 **4.** (Multiple Choice) Which container fits "an RGB color" best?
-A) list  B) tuple  C) dictionary  D) set
+A) list  **B) tuple**  C) dictionary  D) set
 
 **5.** (Short Answer) Give a better description of a tuple than "an immutable list."
+
+**A hashable container whose items are fixed.**
 
 **6.** (Code Tracing) What prints?
 ```python
@@ -32,6 +38,8 @@ a = {"OOP", "Database", "Algorithms"}
 b = {"Database", "Networks"}
 print(a & b)
 ```
+
+**`{'Database'}`**
 
 **7.** (Code Tracing) Evaluate one step at a time. What is the value?
 ```python
@@ -42,11 +50,15 @@ students = [
 students[-1]["name"][0]
 ```
 
+**`'B'`**
+
 ---
 
 ## Section B — Patterns
 
 **8.** (Short Answer) Accumulate and Count both start at `0`. What's the difference in how they update?
+
+**Accumulate adds the value itself (total += item), while Count increments by one (count += 1) each time the value satisfies a condition.****
 
 **9.** (Code Tracing) What prints?
 ```python
@@ -58,10 +70,14 @@ for n in nums:
 print(x)
 ```
 
+**`[-2, -5]`**
+
 **10.** (Multiple Choice) Which pattern is question 9?
-A) Accumulate  B) Count  C) Filter  D) Best So Far
+A) Accumulate  B) Count  **C) Filter**  D) Best So Far
 
 **11.** (Short Answer) When finding the maximum with the Best So Far pattern, why should `best` start at the first item instead of `0`?
+
+**If all the numbers are negative, none of them ever pass 0, so the function incorrectly returns 0. Initializing best with the first element makes sure that best always comes from the actual data.**
 
 ---
 
@@ -73,7 +89,11 @@ def square(x):
     return x * x
 ```
 
+**Nothing**
+
 **13.** (Short Answer) In `def area(width, height):` and `area(3, 5)`, which are the parameters and which are the arguments?
+
+**Parameters: `width`, `height`. Arguments: `3`, `5`.**
 
 **14.** (Code Tracing) What prints?
 ```python
@@ -82,6 +102,8 @@ def square(x):
 
 print(square(3) + square(square(2)))
 ```
+
+**`25`**
 
 **15.** (Code Tracing) What prints? (Careful!)
 ```python
@@ -92,7 +114,11 @@ result = double(5)
 print(result)
 ```
 
+**`10` and `None`**
+
 **16.** (True/False) `print()` gives a value back to the program so it can be used in later calculations.
+
+**False**
 
 **17.** (Code Tracing) What prints?
 ```python
@@ -103,7 +129,11 @@ def check(x):
 print(check(1))
 ```
 
+**`big`**
+
 **18.** (Short Answer) Give three reasons functions are useful *besides* avoiding copy/paste.
+
+**readability, fixing a bug in one place, and combining smaller functions into bigger functions**
 
 ---
 
@@ -118,6 +148,8 @@ def total(numbers):
         return result
 ```
 
+**`return result` is inside the loop, so the loop will break after one pass.**
+
 **20.** (Code Tracing) What prints?
 ```python
 def add_one(values):
@@ -129,6 +161,8 @@ b = add_one(a)
 print(a)
 ```
 
+**`[5, 1]`**
+
 **21.** (Code Tracing) What prints?
 ```python
 nums = [3, 1, 2]
@@ -136,10 +170,16 @@ x = nums.sort()
 print(x, nums)
 ```
 
+**`None [1, 2, 3]`**
+
 **22.** (Multiple Choice) `frequency(["a", "b", "a"])` from Notebook 05 turns a list into a...
-A) number  B) bool  C) list  D) dictionary
+A) number  B) bool  C) list  **D) dictionary**
 
 **23.** (Short Answer) Write the contract (IN / OUT / DOES) for a function `count_above(numbers, threshold)`.
+
+**# IN: a list of numbers and a number**
+**# OUT: an int**
+**# DOES: returns the count of numbers above the threshold**
 
 **24.** (Code Tracing) Given the functions from Notebook 06, what prints?
 ```python
@@ -147,6 +187,8 @@ numbers = [10, -3, 20, 30]
 clean = remove_negatives(numbers)
 print(above(clean, average(clean)))
 ```
+
+**`[30]`**
 
 ---
 
