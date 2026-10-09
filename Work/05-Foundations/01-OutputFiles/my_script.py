@@ -1,0 +1,1 @@
+%run my_script.py
