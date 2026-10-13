@@ -1,0 +1,17 @@
+[
+  {
+    "Game Franchise":"Mario",
+    "Genre":"Platformer",
+    "Main Entries":24
+  },
+  {
+    "Game Franchise":"The Legend of Zelda",
+    "Genre":"Action-Adventure",
+    "Main Entries":21
+  },
+  {
+    "Game Franchise":"Animal Crossing",
+    "Genre":"Simulation",
+    "Main Entries":5
+  }
+]
