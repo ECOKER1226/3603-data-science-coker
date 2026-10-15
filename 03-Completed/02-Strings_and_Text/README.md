@@ -1,6 +1,9 @@
 # 📂 Module 03: Strings and Text
 
-Strings get their own dedicated module here because there's more to them than the brief mentions in earlier modules let on. This module treats strings as a sequence type (like Lists and Tuples), covers the large set of built-in string methods, and gives f-strings the depth they deserve.
+- This module covered Python's string basics (creating strings, quote rules, etc.), string methods (case methods, whitespace cleanup, etc.), and formatted strings.
+- What finally clicked for me in this module was how strings are immutable in Python for hashability and data integrity.
+- One concept that was worth revisiting was using the debug format spec (adding `=` right after an expression) as a shortcut for debugging.
+- As for what I would do differently, this module was straightforward and engaging as is, so I wouldn't change anything about it.
 
 ---
 
@@ -9,26 +12,8 @@ Strings get their own dedicated module here because there's more to them than th
 | Notebook | Description |
 |----------|-------------|
 | [01-String_Basics.ipynb](01-String_Basics.ipynb) | Creating strings, quote rules, escape characters, multi-line strings, indexing/slicing, and immutability. |
+| This notebook taught me how strings are immutable in Python for hashability and data integrity. |
 | [02-String_Methods.ipynb](02-String_Methods.ipynb) | Case methods, whitespace cleanup, `.split()`/`.join()`, searching/replacing, and boolean check methods. |
-| [03-Formatted_Strings.ipynb](03-Formatted_Strings.ipynb) | A deeper look at f-strings: multiple embedded expressions, format specs, calling methods inside `{}`, and older formatting styles you'll still see in the wild. |
-
-Each notebook ends with an optional **🔥 Challenge** section — a harder variant if you want to push past the core material. Skipping it won't hurt you later in the course.
-
----
-
-## 🧠 Learning Goals
-
-- Create strings with single, double, and triple quotes, and know when each is useful
-- Index and slice strings the same way you slice lists and tuples
-- Understand why strings are immutable
-- Use common string methods to clean, search, and transform text
-- Build f-strings with multiple embedded expressions and format specs
-- Recognize `.format()` and `%`-style formatting in older code
-
----
-
-## 📚 Also in this module
-
-- [glossary.md](glossary.md) — key terms
-- [quiz.md](quiz.md) — 20-question self-check with an answer key
-- [worksheet.md](worksheet.md) — practice problems and reflection prompts
+| This notebook taught me how to combine string methods for combining, searching, and transforming text. |
+| [03-Formatted_Strings.ipynb](03-Formatted_Strings.ipynb) | Creating f-strings: multiple embedded expressions, format specs, calling methods inside `{}`, and older formatting styles (`.format()` and `%`-style formatting). |
+| This notebook taught me how to use the debug format spec (adding `=` right after an expression) as a shortcut for debugging. |
